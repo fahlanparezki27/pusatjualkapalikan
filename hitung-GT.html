@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Marketplace terpercaya dalam mencari galangan kapal ikan di Daerah Pesisir Pantai Utara Jawa Tengah">
+  <meta name="title" content="hitung gt-Pusat Jual Kapal Ikan" />
+  <meta name="keywords" content="pusat jual kapal ikan jateng, kapal perikanan, jual kapal batang, jual kapal pekalongan, jual kapal rembang, jual kapal ikan">
+  <title>Hitung Gross Tonnage-Pusat Jual Kapal Ikan</title>
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- My Style -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">Kapal<span>Ikan</span></a>
+
+      <div class="navbar-nav">
+        <a href="index.html">Beranda</a>
+        <a href="tentang-kami.html">Tentang Kami</a>
+        <a href="produk.html">Produk Kapal</a>
+        <a href="hitung-GT.html">Kalkulator GT</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- Hitung GT Section Start -->
+    <div class="text_judul">
+      <h2>Menghitung Gross Tonnage Kapal Ikan</h2>
+    </div>
+    <div class="perhitungan_gt">
+      <section class="calculation-box">
+        <h2>Volume di Bawah Geladak Utama</h2>
+        <form class="volumeForm">
+            <div class="input-group">
+                <label for="lengthVol">Panjang di Bawah Geladak (m):</label>
+                <input type="number" id="lengthVol" required>
+            </div>
+            <div class="input-group">
+                <label for="breadthVol">Lebar di Bawah Geladak (m):</label>
+                <input type="number" id="breadthVol" required>
+            </div>
+            <div class="input-group">
+                <label for="heightVol">Tinggi di Bawah Geladak (m):</label>
+                <input type="number" id="heightVol" required>
+            </div>
+            <button type="button" onclick="calculateVolume()">Hitung Volume</button>
+        </form>
+        <div id="resultVolume"></div>
+    </section>
+
+    <section class="calculation-box">
+      <h2>Volume di Atas Geladak Utama</h2>
+      <form class="volumeForm">
+          <div class="input-group">
+              <label for="lengthAbove">Panjang di Atas Geladak (m):</label>
+              <input type="number" id="lengthAbove" required>
+          </div>
+          <div class="input-group">
+              <label for="breadthAbove">Lebar di Atas Geladak (m):</label>
+              <input type="number" id="breadthAbove" required>
+          </div>
+          <div class="input-group">
+              <label for="heightAbove">Tinggi di Atas Geladak (m):</label>
+              <input type="number" id="heightAbove" required>
+          </div>
+          <button type="button" onclick="calculateVolumeAbove()">Hitung Volume</button>
+      </form>
+      <div id="resultVolumeAbove"></div>
+  </section>
+
+  <section class="calculation-box">
+    <h2>Gross Tonnage Kapal Ikan di Bawah 24 meter</h2>
+    <form class="gtForm">
+        <div class="input-group">
+            <label for="totalVolume1">Volume di Bawah Geladak (m³):</label>
+            <input type="number" id="totalVolume1" required>
+        </div>
+        <div class="input-group">
+            <label for="totalVolume2">Volume di Atas Geladak (m³):</label>
+            <input type="number" id="totalVolume2" required>
+        </div>
+        <button type="button" onclick="calculateGrossTonnage()">Hitung Gross Tonnage</button>
+    </form>
+    <div id="resultGrossTonnage"></div>
+</section>
+
+<section class="calculation-box">
+  <h2>Gross Tonnage Kapal Ikan di Atas 24 meter</h2>
+  <form class="gtForm">
+      <div class="input-group">
+          <label for="totalVolume3">Volume di Bawah Geladak (m³):</label>
+          <input type="number" id="totalVolume3" required>
+      </div>
+      <div class="input-group">
+          <label for="totalVolume4">Volume di Atas Geladak (m³):</label>
+          <input type="number" id="totalVolume4" required>
+      </div>
+      <button type="button" onclick="calculateGrossTonnage1()">Hitung Gross Tonnage</button>
+  </form>
+  <div id="resultGrossTonnage1"></div>
+</section>
+</div>
+    <!-- Hitung GT Section end -->
+
+    <!-- Footer start -->
+    <footer>
+      <p>&copy; 2024 Penjualan Kapal. All rights reserved.</p>
+    </footer>
+    <!-- Footer end -->
+    
+
+    <!-- Feather Icons -->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- My Javascript -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

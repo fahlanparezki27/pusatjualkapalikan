@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Marketplace terpercaya dalam mencari galangan kapal ikan di Daerah Pesisir Pantai Utara Jawa Tengah">
+    <meta name="keywords" content="pusat jual kapal ikan jateng, kapal perikanan, jual kapal batang, jual kapal pekalongan, jual kapal rembang, jual kapal ikan">
+  <meta name="title" content="Produk Kapal-Pusat Jual Kapal Ikan" />
+  <title>Produk Kapal-Pusat Jual Kapal Ikan</title>
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+
+
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- My Style -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">Kapal<span>Ikan</span></a>
+
+      <div class="navbar-nav">
+        <a href="index.html">Beranda</a>
+        <a href="tentang-kami.html">Tentang Kami</a>
+        <a href="produk.html">Produk Kapal</a>
+        <a href="hitung-GT.html">Kalkulator GT</a>
+      </div>
+      
+      <div class="navbar-extra">
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- Menu Section Start -->
+    <div class="Menu">
+    <h2 id="judul">Produk Kapal</h2>
+    <div class="search" onclick="showProductDetail()">
+      <input type="text" id="searchInput" placeholder="Cari produk...">
+      <button id="tombol" onclick="searchProduct()">Cari</button>
+    </div>
+    <div class="filters" id="filter">
+      <button onclick="filterProducts('all')">Semua</button>
+      <button onclick="filterProducts('Pekalongan')">Pekalongan</button>
+      <button onclick="filterProducts('Batang')">Batang</button>
+      <button onclick="filterProducts('Rembang')">Rembang</button>
+  </div>
+    <section class="products" id="productList">
+        <div class="product" data-name="Kapal Ikan CV. Bintang Mumbul Wibowo" data-category="Pekalongan" onclick="showProductDetail(1, 'Kapal Ikan CV. Bintang Mumbul Wibowo', 'Rp. 1.500.000.000', 'Deskripsi kapal ikan 1', 'boat1.jpg')">
+            <img src="img/Pekalongan/Galangan Bintang Mumbul Wibowo/19-min.jpg" alt="produk kapal ikan 1 - Pusat Jual Kapal Ikan">
+            <h3>Kapal Ikan CV. Bintang Mumbul Wibowo</h3>
+        </div>
+        <div class="product" data-name="Kapal Ikan CV. Bintang Mumbul Wibowo" data-category="Pekalongan" onclick="showProductDetail(2, 'Kapal Ikan CV. Bintang Mumbul Wibowo', 'Rp. 2.000.000.000', 'Deskripsi kapal ikan 2', 'boat2.jpg')">
+            <img src="img/Pekalongan/Galangan Bintang Mumbul Wibowo/18.1.jpg" alt="produk kapal ikan 2 - Pusat Jual Kapal Ikan">
+            <h3>Kapal Ikan CV. Bintang Mumbul Wibowo</h3>
+        </div>
+        <div class="product" data-name="Kapal Ikan CV. Wiwik" data-category="Pekalongan" onclick="showProductDetail(3, 'Kapal Ikan CV. Wiwik', 'Rp. 1.500.000.000', 'Deskripsi kapal ikan 3', 'boat3.jpg')">
+            <img src="img/Pekalongan/Galangan Wiwik/9.jpg" alt="Kapal Ikan 3">
+            <h3>Kapal Ikan CV. Wiwik</h3>
+        </div>
+        <div class="product" data-name="Kapal Ikan CV. Wiwik" data-category="Pekalongan" onclick="showProductDetail(4, 'Kapal Ikan CV. Wiwik', 'Rp. 1.500.000.000', 'Deskripsi kapal ikan 4', 'boat1.jpg')">
+            <img src="img/Pekalongan/Galangan Wiwik/5.jpg" alt="Kapal Ikan 4">
+            <h3>Kapal Ikan CV. Wiwik</h3>
+        </div>
+        <div class="product" data-name="Kapal Ikan CV. Berkah Mandiri" data-category="Batang" onclick="showProductDetail(5, 'Kapal Ikan CV. Berkah Mandiri', 'Rp. 1.500.000.000', 'Deskripsi kapal ikan 5', 'boat1.jpg')">
+            <img src="img/Batang/CV. Berkah Mandiri/12.jpg" alt="Kapal Ikan 5">
+            <h3>Kapal Ikan CV. Berkah Mandiri</h3>
+        </div>
+        <div class="product" data-name="Kapal Ikan CV. Berkah Mandiri" data-category="Batang" onclick="showProductDetail(6, 'Kapal Ikan CV. Berkah Mandiri', 'Rp. 1.500.000.000', 'Deskripsi kapal ikan 6', 'boat1.jpg')">
+            <img src="img/Batang/CV. Berkah Mandiri/17.jpg" alt="Kapal Ikan 6">
+            <h3>Kapal Ikan CV. Berkah Mandiri</h3>
+        </div>
+        <div class="product" data-name="Kapal Ikan CV. NoMarine" data-category="Batang" onclick="showProductDetail(7, 'Kapal Ikan CV. NoMarine', 'Rp. 1.500.000.000', 'Deskripsi kapal ikan 7', 'boat1.jpg')">
+            <img src="img/Batang/Galangan NoMarine/4.jpg" alt="Kapal Ikan 7">
+            <h3>Kapal Ikan CV. NoMarine</h3>
+        </div>
+        <div class="product" data-name="Kapal Ikan CV. NoMarine" data-category="Batang" onclick="showProductDetail(8, 'Kapal Ikan CV. NoMarine', 'Rp. 1.500.000.000', 'Deskripsi kapal ikan 8', 'boat1.jpg')">
+            <img src="img/Batang/Galangan NoMarine/5.jpg" alt="Kapal Ikan 8">
+            <h3>Kapal Ikan CV. NoMarine</h3>
+        </div>
+        <div class="product" data-name="Kapal Ikan CV. Soyo Mandiri" data-category="Rembang" onclick="showProductDetail(9, 'Kapal Ikan CV. Soyo Mandiri', 'Rp. 1.500.000.000', 'Deskripsi kapal ikan 9', 'boat1.jpg')">
+            <img src="img/Rembang/CV. Soyo Mandiri/3.jpg" alt="Kapal Ikan 9">
+            <h3>Kapal Ikan CV. Soyo Mandiri</h3>
+        </div>
+        <div class="product" data-name="Kapal Ikan CV. Soyo Mandiri" data-category="Rembang" onclick="showProductDetail(10, 'Kapal Ikan CV. Soyo Mandiri', 'Rp. 1.500.000.000', 'Deskripsi kapal ikan 10', 'boat1.jpg')">
+            <img src="img/Rembang/CV. Soyo Mandiri/4.jpg" alt="Kapal Ikan 10">
+            <h3>Kapal Ikan CV. Soyo Mandiri</h3>
+        </div>
+        <div class="product" data-name="Kapal Ikan CV. Tambah Barokah" data-category="Rembang" onclick="showProductDetail(11, 'Kapal Ikan CV. Tambah Barokah', 'Rp. 1.500.000.000', 'Deskripsi kapal ikan 11', 'boat1.jpg')">
+            <img src="img/Rembang/CV. Tambah Barokah/2.jpg" alt="Kapal Ikan 11">
+            <h3>Kapal Ikan CV. Tambah Barokah</h3>
+        </div>
+        <div class="product" data-name="Kapal Ikan CV. Tambah Barokah" data-category="Rembang" onclick="showProductDetail(12, 'Kapal Ikan CV. Tambah Barokah', 'Rp. 1.500.000.000', 'Deskripsi kapal ikan 12', 'boat1.jpg')">
+            <img src="img/Rembang/CV. Tambah Barokah/5.jpg" alt="Kapal Ikan 12">
+            <h3>Kapal Ikan CV. Tambah Barokah</h3>
+        </div>
+    </section>
+    
+
+     <!-- Detail Produk -->
+  <main class="detail_produk">
+     <section id="product-detail" class="product-detail" style="display: none;">
+      <div class="product-details">
+          <div class="product-images">
+              <img id="mainImage" src="img/Pekalongan/Galangan Bintang Mumbul Wibowo/19-min.jpg" 
+              alt="Produk Kapal Ikan-Pusat Jual Kapal Ikan" class="main-image">
+              <div class="thumbnail-images" id="thumbnailImages">
+                  <!-- Thumbnails akan ditambahkan secara dinamis -->
+              </div>
+          </div>
+          <div class="product-info">
+              <h2 id="productName">Nama Produk</h2>
+              <p><strong>Tipe:</strong> <span id="productType"></span></p>
+              <p><strong>Kapasitas:</strong> <span id="productCapacity"></span></p>
+              <p><strong>Harga:</strong> <span id="productPrice"></span></p>
+              <div class="buttons">
+                <a id="whatsappLink" href="#" target="_blank" class="whatsapp-button">
+                  <button type="button" id="whatsappButton">Pesan Kapal via WhatsApp</button>
+              </div>
+          </div>
+      </div>
+
+      <section class="detail-section">
+          <div class="tabs">
+              <button class="tablink" onclick="openTab(event, 'DetailKapal')">Detail </button>
+          </div>
+
+          <div id="DetailKapal" class="tabcontent">
+              <h2>Detail</h2>
+              <table>
+                  <tr>
+                      <td>Panjang Lunas</td>
+                      <td id="productPanjang">30m</td>
+                      <td>LOA</td>
+                      <td id="productLOA">36m</td>
+                  </tr>
+                  <tr>
+                      <td>Material</td>
+                      <td id="productMaterial">Kayu</td>
+                      <td>Lebar</td>
+                      <td id="productLebar">9,5m</td>
+                  </tr>
+                  <tr>
+                      <td>Tinggi</td>
+                      <td id="productTinggi">Ya</td>          
+              </table>
+          </div>
+      </section>
+  </section>
+</main>
+  </div>
+    <!-- Menu Section End -->
+    
+    <!-- Feather Icons -->
+    <script>
+      feather.replace();
+    </script>
+
+<!-- Footer start -->
+<footer>
+  <p>&copy; 2024 Penjualan Kapal. All rights reserved.</p>
+</footer>
+<!-- Footer end -->
+
+    <!-- My Javascript -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
